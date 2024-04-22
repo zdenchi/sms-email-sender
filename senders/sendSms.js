@@ -4,6 +4,7 @@ async function sendSms(data) {
   const { SMS_API_KEY, SMS_ALPHA_NAME } = process.env;
   const { to, message } = data;
   const options = {
+    url: "https://im.smsclub.mobi/sms/send",
     method: "POST",
     headers: {
       Authorization: `Bearer ${SMS_API_KEY}`,
